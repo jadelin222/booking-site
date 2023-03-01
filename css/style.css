@@ -1,0 +1,418 @@
+/* general setup */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body{
+    font-family: Raleway;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    color: black;
+    text-decoration:none;
+}
+header, main, .search-filter-section{
+    margin: 0 40px;
+}
+/* below is top nav with booki logo*/
+.nav-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-li {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.nav-li li{
+    float: left;
+}
+.NavItem {
+    display: block;
+    padding: 30px 40px;
+    margin-top: -16px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    font-size: 18px;
+    text-align: center;
+}
+.NavItem:hover{
+    border-top-color: #0065FC;
+    color:#0065FC;
+}
+.bookiLogo{
+    width: 150px;
+    margin-top: 15px;
+}
+/* below is searchform  */
+.search-bar{
+    display: inline-block;
+    margin: 0 auto;
+}
+.search-form{
+    height: 60px;
+    position: absolute;
+    width: 400px;
+    border: 1px solid #f2f2f2;
+    border-radius: 15px;
+}
+.search-form button{
+    cursor: pointer;
+}
+.b-map {
+    position: relative;
+    top:-1px;
+    border-radius: 15px 0 0 15px;
+    background-color: #F2F2F2; 
+    border: none;
+    width: 60px;
+    font-size: 20px;
+    padding:18.5px;
+}
+.b-search
+ {
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 18px;
+    padding:11px 19px;
+    position: relative;
+    top:-1px;
+    right: -15px;
+    border: none;
+    height: 60px;
+    color: white;
+    border-radius:  0 15px 15px 0;
+    background-color: #0065FC;
+ }
+ .input-field{
+    border: none;
+    width: 55%;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 600;
+ }
+ .input-field:focus{
+    outline-color: transparent;
+ }
+ /* below is filter */
+.filters{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 100px 0 30px 0px;
+}
+.filters i{
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 15px;
+    margin: -3px -3px -3px -24px;
+}
+.b-filter{
+    font-family:Raleway;
+    text-align: center;
+    background-color: white;
+    border: 3px solid #F2F2F2;
+    padding: 0 20px;
+    border-radius: 50px;
+}
+.b-filter span, label{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+}
+.b-filter:hover{
+    border: 3px solid #0065FC;
+}
+/* info line */
+.acc-amount-display{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.acc-amount-display i{
+    color:white;
+    text-shadow: 0 0 2px #0065fc;
+    padding-right: 15px;
+}
+/* all accommodation section, popular+regular accommodation */
+.accommodation-section{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap:20px;
+}
+.accommodation-section footer{
+    color: #0065FC;
+    font-size: 12px;
+}
+.accommodation-section footer .no-fill{
+    color: #F2F2F2;
+}
+.accommodation-section h3, .activity-section h3, .most-pop-title i{
+    margin: 30px 0;
+}
+/* left accommodation section */
+.subsection-acc{
+    flex: 2 1 530px;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 15px 50px 0 50px;
+}
+.subsection-acc h4{
+    margin-top:40px;
+}
+.accom-cards-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-acc {
+    flex:1 1 25%;
+    min-width: 205px;
+    max-height: 250px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 5px 6px 8px rgba(0,0,0,0.05);
+}  
+.card-acc img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover; 
+}
+.card-body h4, .card-body p, .card-body footer{
+    margin: 8px 0px 8px 15px;
+}
+/* most popular section */
+.subsection-pop{
+    flex: 1;
+    min-width: 460px;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 15px 50px 30px 50px;
+}
+.most-pop-title{
+    display: flex;
+    justify-content: space-between;
+}
+.pop-cards-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.card-pop {
+    width: 100%;
+    height: 160px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 6px 8px rgba(0,0,0,0.05);
+}
+.card-pop img{
+    object-fit: cover;
+    width: 40%;
+    min-width: 150px;
+    height: 100%;
+}
+.pop-body
+{
+    position: relative;
+}
+.pop-body h4, .pop-body p, .pop-body footer
+{
+    margin:0;
+    padding: 15px 10px 0px 20px;
+}
+.pop-body footer{
+    position: absolute;
+    bottom: 10px;
+}
+/* activity section */
+.activity-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.activity-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+.act-two-item-col{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.act-one-item-col, .act-two-item-col{
+    flex: 1;
+}
+.act-one-item-col img {
+    min-height: 500px;
+}
+.act-two-item-col img {
+    max-height: 112px;
+}
+.card-act {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: 5px 6px 8px rgba(0,0,0,0.05);
+}
+.card-act img{
+    min-width: 229px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.act-body{
+    padding: 0px 10px 0px 10px;
+}
+.act-two-item-col #item1 {
+    height: 65% !important;
+}
+.act-two-item-col #item1 img {
+    max-height: 286px;
+}
+.act-two-item-col #item2 {
+    height: 35% !important;
+}
+.act-two-item-col #item2 img {
+    max-height: 127px;
+}
+.act-two-item-col #item3 {
+    height: 48% !important;
+}
+.act-two-item-col #item3 img {
+    max-height: 193px;
+}
+.act-two-item-col #item4 {
+    height: 52% !important;
+}
+.act-two-item-col #item4 img {
+    max-height: 218px;
+}
+/* below is footer */
+.nav-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #F2F2F2;
+}
+.li-title{
+    font-weight: 700;
+}
+.footer-li-container {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-left: 0;
+    gap: 15px;
+    padding: 0;  
+}
+
+@media (min-width: 992px){
+    .button-icon{
+        display: none !important;
+    }
+}
+/* small screen */
+@media (width<768px){
+    body, .NavItem, .filters label, .filters span, .input-field{
+        font-size: 15px;
+    }
+    header, main, .nav-header, .search-filter-section{
+        margin: 0px;
+    }
+    /* header */
+    .nav-header{
+        justify-content: center;
+    }
+    .bookiLogo{
+        width: 120px;
+        padding-left: 20px;
+    }
+    .nav-container {
+        width: 100%;
+    }
+    .nav-container li{
+        width: 50%;
+    }
+    .NavItem{
+        border-bottom-color: #F2F2F2;
+        padding: 20px 0px 10px 0;
+    }
+    .NavItem:hover{
+        border-bottom-color: #0065FC;
+        border-top-color: transparent;
+    }
+    /* search bar */
+    .search-form{
+        width: 300px;
+    }
+    .b-search{
+        padding: 20px;
+        border-radius: 15px;
+        right: -10px;
+    }
+    .button-text{
+        display: none;
+    }
+    /* filters */
+    .filters {gap: 15px;}
+    .low-cost {order: 1;}
+    .romantic {order: 2;}
+    .family-friendly {order: 3;}
+    .pets-allowed {order: 4;}
+    /* card elements horizotal align  */
+    .accom-cards-container, .nav-footer, .activity-container, .pop-cards-container, .act-two-item-col{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .subsection-acc, .subsection-pop{
+        flex:0 0 auto;
+        width: 100%;
+        min-width: 0px;
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+    .subsection-acc{
+        background-color: white;
+    }
+    .activity-section, .search-filter-section{
+        padding: 0 20px;
+    }
+    .card-act img{
+        min-height: 150px !important;
+        max-height: 150px !important;
+    }
+}
+/* tablet */
+@media (max-width: 992px) and (min-width: 768px){
+    header, main, .search-filter-section {
+        margin: 0 30px;
+    }
+    .button-icon{
+        display: none !important;
+    }
+    .subsection-acc, .subsection-pop{
+        width: 100%;
+    }
+}
